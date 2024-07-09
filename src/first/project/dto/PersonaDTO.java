@@ -1,3 +1,5 @@
+package first.project.dto;
+
 public class PersonaDTO {
     private String nombre;
     private String apellido;
