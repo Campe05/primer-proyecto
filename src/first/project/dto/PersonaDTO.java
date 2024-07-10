@@ -4,12 +4,14 @@ public class PersonaDTO {
     private String nombre;
     private String apellido;
     private int edad;
+    private String direccion; // Nuevo atributo
 
     // Constructor
-    public PersonaDTO(String nombre, String apellido, int edad) {
+    public PersonaDTO(String nombre, String apellido, int edad, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+        this.direccion = direccion;
     }
 
     // Getters y Setters
@@ -37,11 +39,25 @@ public class PersonaDTO {
         this.edad = edad;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    // Nuevo método
+    public boolean esMayorDeEdad() {
+        return this.edad >= 18;
+    }
+
     // Método toString para imprimir detalles
     @Override
     public String toString() {
         return "Nombre: " + nombre + "\n" +
                 "Apellido: " + apellido + "\n" +
-                "Edad: " + edad;
+                "Edad: " + edad + "\n" +
+                "Dirección: " + direccion;
     }
 }
